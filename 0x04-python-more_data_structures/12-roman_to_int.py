@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    # Fail checks, none, not a string
+    #Fail checks, none, not a string
     if not roman_string:
         return 0
     if not isinstance(roman_string, str):
         return 0
     if not roman_string.isupper():
         return 0
-    # Dictionary for roman numerals
+    #Dictionary for roman numerals
     r_dict = {
         "I": 1,
         "IV": 4,
@@ -21,7 +21,7 @@ def roman_to_int(roman_string):
     }
     result = 0
     temp = list(roman_string)
-    # Concat 4 and 9s
+    #Concat 4 and 9s
     if len(temp) > 1:
         idx = 0
         for i in temp:
@@ -36,7 +36,7 @@ def roman_to_int(roman_string):
             except IndexError:
                 pass
             idx += 1
-    # Search in dict for correct numbers and add
+    #Search in dict for correct numbers and add
     for k, v in r_dict.items():
         for index in temp:
             if index == k:
