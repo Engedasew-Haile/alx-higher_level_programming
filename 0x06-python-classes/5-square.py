@@ -43,3 +43,4 @@ class Square():
                 print('#' * self.__size)
         else:
             print()
+
