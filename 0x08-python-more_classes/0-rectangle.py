@@ -5,7 +5,7 @@ This is the "Rectangle"  module.
 This module provides a simple Rectangle class.
 """
 
-
-class Rectangle:
-        """A simple Rectangle class"""
-            pass
+class Rectangle: 
+    def __init__(self, width, height, color): 
+        self.width = width self.height = height self.color = color
+        pass
