@@ -7,11 +7,10 @@
 	//You are not allowed to use var
 	//You must use a loop (while, for, etc.)
 
-if (isNaN(process.arvg[2])){
+if (isNaN(process.arvg[2])) {
 	console.log('Missing size');
-}
-else {
+} else {
 	for (let i = 0; i < parseInt(process.arvg[2]); i++){
-		console.log('X.repeat(parseInt(process.arvg[2])));
+		console.log('X'.repeat(parseInt(process.arvg[2])));
 	}
 }
