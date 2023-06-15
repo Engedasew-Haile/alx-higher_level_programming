@@ -1,6 +1,5 @@
 #!/usr/bin/node
-// class Rectangle that defines a rectangle:
+// class Rectangle that fines a rectangle:
 
-class {
-}
+class Rectangle {}
 module.exports = class Rectangle {};
