@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-# Lists all States and corresponding Cities in the database hbtn_0e_101_usa.
-# Usage: ./101-relationship_states_cities_list.py <mysql username> /
-#                                                 <mysql password> /
-#                                                 <database name>
+"""
+This script retrieves and prints the State object with the provided name
+from the database, along with its associated cities.
+"""
 import sys
 from relationship_state import Base, State
 from relationship_city import City
