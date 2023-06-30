@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""Lists the 10 most recent commits on a given GitHub repository.
-Usage: ./100-github_commits.py <repository name> <repository owner>
+"""a Python script that takes 2 arguments in order to solve this challenge.
+The first argument will be the repository name
+The second argument will be the owner name
+You must use the packages requests and sys
+You are not allowed to import packages other than requests and sys
 """
 import sys
 import requests
