@@ -1,30 +1,37 @@
 #!/usr/bin/python3
-""" a function that finds a peak in a list of unsorted integers.
-Prototype: def find_peak(list_of_integers):
-You are not allowed to import any module
-Your algorithm must have the lowest complexity (hint: you don’t need to go through all numbers to find a peak)
-6-peak.py must contain the function
-6-peak.txt must contain the complexity of your algorithm: O(log(n)), O(n), O(nlog(n)) or O(n2)
-"""
+
+""" a function that finds a peak in a list of unsorted integers """
+
 
 def find_peak(list_of_integers):
-    size = len(list_of_integers)
-    mid_e = size
-    mid = size // 2
+    """
+    Find a peak in a list of unsorted integers.
 
-    if size == 0:
+    Args:
+        list_of_integers (list): The list of unsorted integers.
+
+    Returns:
+        int or None: The peak elemident if found,
+        or None if the list is emidpty.
+
+    """
+    if list_of_integers == []:
         return None
 
-    while True:
-        mid_e = mid_e // 2
-        if (mid < size - 1 and
-                list_of_integers[mid] < list_of_integers[mid + 1]):
-            if mid_e // 2 == 0:
-                mid_e = 2
-            mid = mid + mid_e // 2
-        elif mid_e > 0 and list_of_integers[mid] < list_of_integers[mid - 1]:
-            if mid_e // 2 == 0:
-                mid_e = 2
-            mid = mid - mid_e // 2
-        else:
-            return list_of_integers[mid]
+    length = len(list_of_integers)
+    mid = int(length / 2)
+    arr = list_of_integers
+
+    if mid - 1 < 0 and mid + 1 >= length:
+        return arr[mid]
+    elif mid - 1 < 0:
+        return arr[mid] if arr[mid] > arr[mid + 1] else arr[mid + 1]
+    elif mid + 1 >= length:
+        return arr[mid] if arr[mid] > arr[mid - 1] else arr[mid - 1]
+
+    if arr[mid - 1] < arr[mid] > arr[mid + 1]:
+        return arr[mid]
+
+    if arr[mid + 1] > arr[mid - 1]:
+        return find_peak(arr[mid:])
+    return find_peak(arr[:mid])
