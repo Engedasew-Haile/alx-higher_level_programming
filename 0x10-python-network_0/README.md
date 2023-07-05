@@ -46,6 +46,6 @@ All your classes should be documented: python3 -c 'print(__import__("my_module")
 All your functions (inside and outside a class) should be documented: python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
 A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 
-Repo:
+Repo:...
 GitHub repository: alx-higher_level_programming
 Directory: 0x10-python-network_0
