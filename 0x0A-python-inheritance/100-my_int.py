@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """
 =============================
-a class MyInt that inherits from int:
     MyInt is a rebel. MyInt has == and != operators inverted
 =============================
 """
-
 
 class MyInt(int):
     """class that inherits from int"""
